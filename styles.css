@@ -1,0 +1,618 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0303;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .logo span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff5722;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ff5722;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff5722;
+}
+
+/* Search Bar */
+.search-bar {
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #ff5722;
+}
+
+.icons a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.icons a:hover {
+    color: #ff5722;
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+}
+
+.main-content img, video {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Info Boxes */
+.info-box {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.info-box div {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Products */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #e64a19;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #ff5722;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+.video-full {
+width: 100%;
+height: 100vh; /* Video chiếm toàn bộ chiều cao màn hình */
+object-fit: cover; /* Đảm bảo video không bị méo hình */
+transition: transform 0.5s ease; /* Hiệu ứng chuyển động mượt */
+}
+
+.video-full:hover {
+transform: perspective(1000px) rotateY(0deg); /* Xóa xoay khi hover */
+}
+body, html {
+margin: 0;
+padding: 0;
+overflow: scroll; 
+}
+.video-fullscreen {
+position: fixed; /* Đảm bảo video chiếm toàn màn hình */
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover; /* Video không bị méo hình và giữ nguyên tỷ lệ */
+z-index: -1; /* Video nằm dưới nội dung khác */
+}
+.carousel-item img {
+    max-height: 700px; /* Set chiều cao tối đa cho ảnh carousel */
+    object-fit: cover; /* Đảm bảo hình ảnh vừa khung mà không méo */
+}
+/* Footer Styles */
+.footer {
+    background-color: #222; /* Màu nền */
+    color: #fff; /* Màu chữ */
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ff5722;
+}
+
+.footer-column p,
+.footer-column a,
+.footer-column ul {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #ff5722;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #ddd;
+}
+
+.footer-column ul li a:hover {
+    color: #ff5722;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-media a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #ff5722;
+    transform: scale(1.2); /* Hiệu ứng phóng to */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+.card-container {
+    display: flex; /* Dùng flexbox để xếp thẻ card theo chiều ngang */
+    gap: 20px; /* Thêm khoảng cách giữa các thẻ */
+    justify-content: center; /* Căn giữa các thẻ theo chiều ngang */
+    flex-wrap: wrap; /* Đảm bảo chúng sẽ xuống hàng khi màn hình nhỏ */
+}
+
+.card {
+    text-align: center; /* Căn giữa nội dung trong từng thẻ */
+}
+/* Phần hiển thị info-box */
+.info-box {
+    display: flex; /* Sắp xếp các thẻ nằm ngang */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    flex-wrap: wrap; /* Để xuống hàng khi không đủ chỗ */
+    gap: 20px; /* Khoảng cách giữa các thẻ */
+    padding: 20px;
+    background-color: #f9f9f9; /* Màu nền nhẹ nhàng */
+    border-radius: 10px; /* Bo góc cho toàn bộ khu vực */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+/* Khung cho từng info-card */
+.info-card {
+    background-color: #fff; /* Màu nền trắng cho thẻ */
+    border: 2px solid #ff5722; /* Đường viền nổi bật với màu cam */
+    border-radius: 10px; /* Bo góc mềm mại */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng cho từng thẻ */
+    padding: 20px;
+    text-align: center;
+    width: 250px; /* Chiều rộng cố định cho mỗi thẻ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+/* Hiệu ứng hover */
+.info-card:hover {
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn khi hover */
+}
+
+/* Tiêu đề trong mỗi thẻ */
+.info-card h3 {
+    font-size: 18px;
+    color: #ff5722; /* Màu cam cho tiêu đề */
+    margin-bottom: 10px;
+}
+
+/* Nội dung mô tả trong mỗi thẻ */
+.info-card p {
+    font-size: 14px;
+    color: #555; /* Màu chữ xám dịu */
+}
+/* Phần container cho card */
+.card-container {
+    display: flex; /* Sắp xếp các thẻ card theo chiều ngang */
+    gap: 20px; /* Khoảng cách giữa các card */
+    flex-wrap: wrap; /* Để xuống hàng khi không đủ chỗ */
+    justify-content: center; /* Căn giữa các card */
+    padding: 20px;
+}
+
+/* Card thiết kế */
+.card {
+    background-color: #fff; /* Màu nền trắng cho thẻ */
+    border: 2px solid #ff5722; /* Đường viền nổi bật với màu cam */
+    border-radius: 10px; /* Bo góc mềm mại */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    width: 18rem; /* Chiều rộng cố định */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng khi hover */
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn khi hover */
+}
+
+/* Ảnh sản phẩm */
+.card img {
+    border-radius: 10px 10px 0 0; /* Bo góc phía trên của ảnh */
+    width: 100%;
+    height: auto;
+}
+
+/* Tiêu đề sản phẩm */
+.card-body h1 {
+    font-size: 18px;
+    color: #ff5722; /* Màu chữ cam nổi bật */
+    margin: 10px 0;
+}
+/* Container của ảnh */
+/* Container của ảnh */
+.image-container {
+    display: flex;
+    justify-content: center; /* Căn giữa hình ảnh theo chiều ngang */
+    align-items: center; /* Căn giữa nội dung bên trong */
+    padding: 20px;
+    background-color: #fff; /* Nền trắng cho khung chứa */
+    border: 3px solid #ff5722; /* Đường viền màu cam nổi bật */
+    border-radius: 15px; /* Bo góc mềm mại */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng để tạo chiều sâu */
+    max-width: 90%; /* Cập nhật để hình ảnh chiếm diện tích lớn hơn */
+    margin: 20px auto; /* Căn giữa toàn bộ container */
+}
+
+/* Ảnh bên trong */
+.styled-image {
+    width: 120%; /* Tăng kích thước ảnh vượt quá khung */
+    height: auto; /* Duy trì tỷ lệ của ảnh */
+    border-radius: 10px; /* Bo góc nhẹ cho ảnh */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+/* Hiệu ứng khi hover */
+.styled-image:hover {
+    transform: scale(1.1); /* Phóng to hơn khi hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Đổ bóng đậm hơn khi hover */
+}
+/* Container cho toàn bộ phần sản phẩm */
+.product-container {
+    text-align: center; /* Để căn giữa nút */
+    margin: 20px;
+}
+
+/* Container cho các thẻ card */
+.card-container {
+    display: flex; /* Để các sản phẩm nằm ngang */
+    gap: 20px; /* Khoảng cách giữa các card */
+    justify-content: center; /* Căn giữa các thẻ card */
+    flex-wrap: wrap; /* Đảm bảo xuống hàng nếu không đủ chỗ */
+    margin-top: 20px;
+}
+
+/* Card thiết kế */
+.card {
+    background-color: #fff;
+    border: 2px solid #ff5722;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 18rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Hiệu ứng hover phóng to */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Tăng bóng khi hover */
+}
+
+.card img {
+    border-radius: 10px 10px 0 0; /* Bo góc ảnh phía trên */
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-body h1 {
+    font-size: 18px;
+    color: #ff5722;
+    margin: 10px 0;
+}
+
+/* Nút toggle */
+.toggle-btn {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #e64a19;
+}
+.carousel-container {
+    display: flex;
+    overflow-x: scroll; /* Tạo thanh cuộn ngang */
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+}
+/* Thêm kiểu cho thanh cuộn */
+.carousel-container::-webkit-scrollbar {
+    height: 10px; /* Độ cao thanh cuộn */
+}
+.carousel-container::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Màu nền thanh cuộn */
+}
+.carousel-container::-webkit-scrollbar-thumb {
+    background: #888; /* Màu thanh cuộn */
+    border-radius: 10px; /* Bo góc */
+}
+.carousel-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Màu khi hover */
+}
+.product-card {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+}
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+spline-viewer {
+    display: block;
+    width: 100%; /* Chiều rộng bằng toàn bộ trang web */
+    height: 100vh; /* Chiều cao bằng chiều cao của cửa sổ trình duyệt */
+}
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+header, .navbar, .search-bar, .main-content, .info-box div, .products, .product, footer, .footer, .info-card, .card {
+    background-color: #000;
+    color: #fff;
+    border-color: #222;
+}
+
+.product button, .toggle-btn {
+    background-color: #222;
+    color: #fff;
+}
+
+.product button:hover, .toggle-btn:hover {
+    background-color: #444;
+}
+
+.footer-column a:hover, .navbar a:hover, header nav a:hover {
+    color: #ff5722;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    position: relative;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    border: none;
+    outline: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
